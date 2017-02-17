@@ -10,4 +10,4 @@ const create = (inputs = {}) => {
   return { LIST: list }
 }
 
-module.exports = { create }
+export default create

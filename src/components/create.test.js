@@ -1,4 +1,4 @@
-import { create } from './create'
+import create from './create'
 
 it('creates a list with values', () => {
   const result = create({ITEM9: () => ('nine'), ITEM0: () => (0), ITEM1: () => ('ONE'), ITEM14: () => (14.4), ITEM102: () => (102)})

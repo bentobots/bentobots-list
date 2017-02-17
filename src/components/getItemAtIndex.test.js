@@ -1,4 +1,4 @@
-import { getItemAtIndex } from './getItemAtIndex'
+import getItemAtIndex from './getItemAtIndex'
 
 it('works without LIST', () => {
   const result = getItemAtIndex({INDEX: () => (1)})
