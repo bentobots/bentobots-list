@@ -5,7 +5,7 @@ const create = (inputs = {}) => {
     // sort 'naturally'
     .sort((a, b) => a - b)
     // return input values in correct order
-    .map(sorted => inputs[`ITEM${sorted}`]())
+    .map(sorted => inputs[`ITEM${sorted}`])
 
   return { LIST: list }
 }
