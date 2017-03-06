@@ -1,13 +1,25 @@
-const create = (inputs = {}) => {
-  const list = Object.keys(inputs)
+const implementation = (INPUTS = {}) => {
+  const list = Object.keys(INPUTS)
     // extract numbers from "ITEM${NUMBER}"
     .map(k => k.match(/\d+$/)[0])
     // sort 'naturally'
     .sort((a, b) => a - b)
     // return input values in correct order
-    .map(sorted => inputs[`ITEM${sorted}`]())
+    .map(sorted => INPUTS[`ITEM${sorted}`]())
 
   return { LIST: list }
 }
 
-export default create
+const spec = {
+  name: 'Create List',
+  description: 'makes a list from what\'s passed into it',
+  implementation,
+  inputs: {
+    INPUTS: {}
+  },
+  outputs: {
+    LIST: {}
+  }
+}
+
+export default spec
