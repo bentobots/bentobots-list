@@ -5,7 +5,7 @@ const implementation = (INPUTS = {}) => {
     // sort 'naturally'
     .sort((a, b) => a - b)
     // return input values in correct order
-    .map(sorted => INPUTS[`ITEM${sorted}`]())
+    .map(sorted => INPUTS[`ITEM${sorted}`])
 
   return { LIST: list }
 }
@@ -15,7 +15,9 @@ const spec = {
   description: 'makes a list from what\'s passed into it',
   implementation,
   inputs: {
-    INPUTS: {}
+    ITEM0: {},
+    ITEM1: {},
+    ITEM2: {}
   },
   outputs: {
     LIST: {}
